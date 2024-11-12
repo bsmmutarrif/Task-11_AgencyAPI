@@ -1,6 +1,34 @@
 package com.example.agencyapi.model;
+
+import jakarta.validation.constraints.NotBlank;
+
+
+
+
+
 public class Agency {
+
+    @NotBlank(message = "ID cannot be null or blank.")
     private String id;
+
+    @NotBlank(message = "Name cannot be null or blank.")
+    private String name;
+
+    @NotBlank(message = "Code cannot be null or blank.")
+    private String code;
+    private String description;
+    private String descriptionBd;
+
+
+
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
@@ -9,8 +37,8 @@ public class Agency {
     public void setName(String name) {
         this.name = name;
     }
+    @NotBlank(message = "ID cannot be null or blank.")
 
-    private String name;
 
     public String getCode() {
         return code;
@@ -20,7 +48,7 @@ public class Agency {
         this.code = code;
     }
 
-    private String code;
+
 
     public String getDescription() {
         return description;
@@ -30,13 +58,19 @@ public class Agency {
         this.description = description;
     }
 
-    private String description;
 
-    public void setId(String id) {
-        this.id = id;
+
+
+
+    public String getdescriptionBd()
+    {
+        return descriptionBd;
     }
 
-    public String getId() {
-        return id;
+    public void setdescriptionBd(String descriptionBd)
+    {
+        this.descriptionBd = descriptionBd;
     }
+
+
 }
