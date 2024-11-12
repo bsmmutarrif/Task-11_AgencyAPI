@@ -1,5 +1,7 @@
 package com.example.agencyapi.model;
+
 public class Agency {
+
     private String id;
 
     public String getName() {
@@ -39,4 +41,16 @@ public class Agency {
     public String getId() {
         return id;
     }
+
+    public String getdescriptionBd()
+    {
+        return descriptionBd;
+    }
+
+    public void setdescriptionBd(String descriptionBd)
+    {
+        this.descriptionBd = descriptionBd;
+    }
+
+    private String descriptionBd;
 }
