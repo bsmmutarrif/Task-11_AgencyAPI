@@ -23,7 +23,8 @@ public class AgencyService {
         boolean exists = agencies.stream().anyMatch(agency ->
                 agency.getName().equalsIgnoreCase(newAgency.getName()) ||
                         agency.getCode().equalsIgnoreCase(newAgency.getCode())
-        );if (exists) {
+        );
+        if (exists) {
             return "Cannot add agency: An agency with the same name or code already exists.";
         }
         agencies.add(newAgency);

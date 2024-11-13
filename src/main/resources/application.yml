@@ -1,4 +1,11 @@
 server:
   port: 8081
 agency:
- updates-allowed: true
+  updates-allowed: true
+
+spring:
+   security:
+     user:
+       name: admin
+       password: admin123
+
