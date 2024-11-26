@@ -7,19 +7,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/agency")public class AgencyApiController {
+@RequestMapping("/api/agency")
+
+public class AgencyApiController {
+
     @Autowired
     private AgencyService agencyService;
     @GetMapping("/all")
     public List<Agency> getAllAgencies() {
         return agencyService.getAllAgencies();
-    } @
-            PostMapping("/add")
+    } @PostMapping("/add")
     public String addAgency(@Valid @RequestBody Agency
                                     agency) {
         return agencyService.addAgency(agency);
-    } @
-            PutMapping("/update")
+    } @PutMapping("/update")
     public String updateAgency(@Valid @RequestBody Agency
                                        agency) {
         return agencyService.updateAgency(agency);

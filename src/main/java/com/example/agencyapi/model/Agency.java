@@ -37,8 +37,6 @@ public class Agency {
     public void setName(String name) {
         this.name = name;
     }
-    @NotBlank(message = "ID cannot be null or blank.")
-
 
     public String getCode() {
         return code;

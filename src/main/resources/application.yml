@@ -2,10 +2,17 @@ server:
   port: 8081
 agency:
   updates-allowed: true
-
 spring:
-   security:
-     user:
-       name: admin
-       password: admin123
-
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: agencyapi
+            client-secret: qhgSNhhFHZGpm6kJGmI8kVUIalifxCZE
+            scope: openid
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+            keycloak:
+              issuer-uri: http://localhost:8080/realms/spring-boot-realm
