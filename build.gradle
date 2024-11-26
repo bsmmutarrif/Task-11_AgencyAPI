@@ -28,6 +28,14 @@ dependencies {
 	implementation 'org.springframework.security:spring-security-oauth2-jose'
 	implementation 'org.keycloak:keycloak-spring-boot-starter:21.0.0'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Spring Security OAuth2 Resource Server
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+
+	// Optional: Spring Boot Starter Security for general security configuration
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// Optional: JSON Web Token (JWT) processing library (included transitively by resource server)
+	implementation 'com.nimbusds:nimbus-jose-jwt:9.31' // Update version if necessary
 }
 
 tasks.named('test') {
